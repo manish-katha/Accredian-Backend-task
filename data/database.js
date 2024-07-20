@@ -6,7 +6,7 @@ export const connectDB = async () => {
   try {
     pool = mysql.createPool({
       host: process.env.LOCALHOST,
-      user: process.env.USERNAME,
+      user: process.env.USERS,
       password: process.env.PASSWORDS, // Use the retrieved password here
       database: process.env.DBNAME,
       waitForConnections: true,
