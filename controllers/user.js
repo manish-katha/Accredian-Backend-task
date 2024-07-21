@@ -23,8 +23,8 @@ export const register = async (req, res, next) => {
 
     // Insert new user
     const createUserQuery = `
-            INSERT INTO users (name, email, password, createDAT)
-            VALUES (?, ?, ?, CURRENT_TIMESTAMP)
+            INSERT INTO users (name, email, password)
+            VALUES (?, ?, ?)
         `;
     await connection.query(createUserQuery, [name, email, hashedPassword]);
 
