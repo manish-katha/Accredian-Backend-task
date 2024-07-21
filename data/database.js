@@ -5,7 +5,7 @@ let pool; // Declare pool outside to ensure access to `pass`.
 export const connectDB = async () => {
   try {
     pool = mysql.createPool({
-      host: process.env.LOCALHOST,
+      host: process.env.HOST,
       user: process.env.USERS,
       password: process.env.PASSWORDS, // Use the retrieved password here
       database: process.env.DBNAME,
