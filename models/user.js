@@ -11,7 +11,7 @@ export const User = async () => {
         name VARCHAR(255) NOT NULL,
         email VARCHAR(255) NOT NULL UNIQUE,
         password VARCHAR(255) NOT NULL,
-        createDATE DATETIME NOT NULL date.now()
+        createDATE DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
       )
     `;
 
